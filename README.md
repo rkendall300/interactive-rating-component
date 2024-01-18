@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Screenshots
 
-![](./screenshots/homepage-desktop.PNG)
-![](./screenshots/thank-you-desktop.PNG)
+![](./src/screenshots/homepage-desktop.PNG)
+![](./src/screenshots/thank-you-desktop.PNG)
 
 ### Links
 
