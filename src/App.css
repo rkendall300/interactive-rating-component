@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Overpass-Regular';
+    src: url(./static/Overpass-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Overpass-Bold';
+    src: url(./static/Overpass-Bold.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Global background div */
+.backdrop {
+    width: 100%;
+    height: 100vh;
+    background-color: #141519;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Homepage styling */
+#home-card {
+    width: 350px;
+    height: 400px;
+    background-color: #1e252f;
+    padding: 2rem;
+    border-radius: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+#star-container {
+    background-color: #262f38;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#title {
+    color: #fff;
+    font-family: 'Overpass-Bold';
+    margin: 35px 0 10px 0;
+}
+
+#description {
+    color: #727983;
+    font-family: 'Overpass-Regular';
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+}
+
+#rating-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.rating {
+    background-color: #262f38;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #727983;
+    font-family: 'Overpass-Bold';
+    font-size: 15px;
+}
+
+.rating:hover {
+    background-color: #959eac;
+    color: #fff;
+}
+
+.rating.active {
+    background-color: #fb7413;
+    color: #fff;
+}
+
+#submit {
+    background-color: #fb7413;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'Overpass-Bold';
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+#submit:hover {
+    background-color: #fff;
+    color: #fb7413;
+}
+
+/* Thank you page styling */
+#ty-card {
+    width: 350px;
+    height: 400px;
+    background-color: #1e252f;
+    padding: 2rem;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#selection-message {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #262f38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 0 0;
+}
+
+#selection-text {
+    color: #fb7413d5;
+    font-family: 'Overpass-Regular';
+    font-size: 15px;
+}
+
+h2 {
+    font-family: 'Overpass-Regular';
+    color: #fff;
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+}
+
+#ty-description {
+    font-family: 'Overpass-Regular';
+    font-size: 15px;
+    color: #727983;
+    margin: 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* Mobile styling section */
+@media screen and (max-width: 425px) {
+    /* Homepage */
+    #home-card {
+        width: 275px;
+        height: 350px;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    #star-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    #title {
+        font-size: 25px;
+        margin: 25px 0 15px 0;
+    }
+
+    #description {
+        line-height: 20px;
+    }
+
+    #rating-container {
+        margin: 30px 0;
+    }
+
+    .rating {
+        width: 40px;
+        height: 40px;
+    }
+
+    #submit {
+        font-size: 15px;
+        letter-spacing: 1px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    /* Thank you page */
+    #ty-card {
+        width: 275px;
+        height: 350px;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 30px 0 10px 0;
+    }
+
+    #ty-description {
+        line-height: 22px;
+    }
 }
